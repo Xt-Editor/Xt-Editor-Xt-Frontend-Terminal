@@ -10,7 +10,7 @@ readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "slacs-tui"
+name = "slacstui"
 path = "src/lib.rs"
 
 [[bin]]
