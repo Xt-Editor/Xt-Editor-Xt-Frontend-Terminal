@@ -9,4 +9,15 @@ keywords = ["editor", "framework", "text"]
 readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
+[lib]
+name = "slacs-tui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "slacs-tui"
+path = "src/bin/slacs-tui.rs"
+
+[features]
+default=[]
+
 [dependencies]
