@@ -19,7 +19,7 @@ echo "INFO: Testing.."
 make test
 
 echo "INFO: Building docs.."
-make doc
-make doc_info
+# make doc
+# make doc_info
 
 exit
