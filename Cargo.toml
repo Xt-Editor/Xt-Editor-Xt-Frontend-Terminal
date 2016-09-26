@@ -1,21 +1,21 @@
 [package]
-name = "slacs-tui"
+name = "xtensis-tui"
 version = "0.1.0"
-description = "Prototype of a TUI for slacs"
+description = "Prototype of a TUI for xtensis"
 license = "MIT OR Apache2.0"
-homepage = "https://github.com/shymega/slacs-tui"
-repository = "https://github.com/shymega/slacs-tui.git"
+homepage = "https://github.com/shymega/xtensis-tui"
+repository = "https://github.com/shymega/xtensis-tui.git"
 keywords = ["editor", "framework", "text"]
 readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "slacstui"
+name = "xtensistui"
 path = "src/lib.rs"
 
 [[bin]]
-name = "slacs-tui"
-path = "src/bin/slacs-tui.rs"
+name = "xtensis-tui"
+path = "src/bin/xtensis-tui.rs"
 
 [features]
 default=[]
@@ -28,4 +28,6 @@ serde = "0.8.1"
 serde_json = "0.8.1"
 docopt = "0.6.82"
 rustc-serialize = "0.3"
-rustbox = "0.9.0"
+
+[dependencies.rustbox]
+git = "https://github.com/gchp/rustbox"

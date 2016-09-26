@@ -7,24 +7,31 @@
 
 extern crate rustc_serialize;
 extern crate docopt;
-extern crate slacstui;
+extern crate xtensistui;
+extern crate rustbox;
+extern crate time;
 
 #[macro_use]
 extern crate log;
 extern crate fern;
-extern crate time;
+
+use std::error::Error;
+use std::default::Default;
+
+use rustbox::{Color, RustBox};
+use rustbox::Key;
 
 use docopt::Docopt;
 
-use slacstui::logging::logger::init_logger;
+use xtensistui::logging::logger::init_logger;
 
 const USAGE: &'static str = "
-slacs-tui
+xtensis-tui
 
 Usage:
-  slacs-tui new [--nodaemon]
-  slacs-tui (-h | --help)
-  slacs-tui --version
+  xtensis-tui new [--nodaemon]
+  xtensis-tui (-h | --help)
+  xtensis-tui --version
 
 Options:
   -h --help     Show this screen.
@@ -42,7 +49,7 @@ struct Args {
 }
 
 fn print_version() {
-    println!("slacs-tui version: {}", VERSION);
+    println!("xtensis-tui version: {}", VERSION);
 }
 
 fn get_arguments() -> Args {
@@ -63,7 +70,7 @@ fn main() {
     trace!("Ascertain argument struct..");
     let args = get_arguments();
 
-    info!("slacs-tui version: {} - starting NOW..", VERSION);
+    info!("xtensis-tui version: {} - starting NOW..", VERSION);
 
     if args.flag_version {
         trace!("Arguments tell me to print my version..");
@@ -71,4 +78,42 @@ fn main() {
         print_version();
         ::std::process::exit(0);
     }
+
+    let rustBox = match RustBox::init(Default::default()) {
+        Result::Ok(v) => v,
+        Result::Err(e) => panic!("{}", e),
+    };
+
+    rustBox.print(1,
+                  1,
+                  rustbox::RB_BOLD,
+                  Color::White,
+                  Color::Black,
+                  "Welcome to xtensis.");
+
+    rustBox.print(1,
+                  3,
+                  rustbox::RB_BOLD,
+                  Color::White,
+                  Color::Black,
+                  "Press `q` to quit.");
+
+    rustBox.present();
+
+    loop {
+        rustBox.present();
+        match rustBox.poll_event(false) {
+            Ok(rustbox::Event::KeyEvent(key)) => {
+                match key {
+                    Key::Char('q') => {
+                        break;
+                    }
+                    _ => {}
+                }
+            }
+            Err(e) => panic!("{}", e),
+            _ => {}
+        }
+    }
+
 }
