@@ -1,8 +1,8 @@
 [package]
-name = "xtensis-tui"
+name = "xtensis-termbox"
 version = "0.1.0"
 description = "Prototype of a TUI for xtensis"
-license = "MIT OR Apache2.0"
+license = "GPL-3.0"
 homepage = "https://github.com/shymega/xtensis-tui"
 repository = "https://github.com/shymega/xtensis-tui.git"
 keywords = ["editor", "framework", "text"]
