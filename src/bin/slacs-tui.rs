@@ -7,7 +7,11 @@
 
 extern crate rustc_serialize;
 extern crate docopt;
+<<<<<<< HEAD
 extern crate xtensistui;
+=======
+extern crate slacstui;
+>>>>>>> gh/master
 extern crate rustbox;
 extern crate time;
 
@@ -89,7 +93,11 @@ fn main() {
                   rustbox::RB_BOLD,
                   Color::White,
                   Color::Black,
+<<<<<<< HEAD
                   "Welcome to xtensis.");
+=======
+                  "Welcome to slacs.");
+>>>>>>> gh/master
 
     rustBox.print(1,
                   3,
