@@ -31,3 +31,4 @@ rustc-serialize = "0.3"
 
 [dependencies.rustbox]
 git = "https://github.com/gchp/rustbox"
+rev = "3970d151f4e83a220dcc0b06df210accd88128f7"
