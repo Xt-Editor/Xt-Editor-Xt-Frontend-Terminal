@@ -14,8 +14,8 @@ name = "xtensistui"
 path = "src/lib.rs"
 
 [[bin]]
-name = "xtensis-tui"
-path = "src/bin/xtensis-tui.rs"
+name = "xtensis-termbox"
+path = "src/bin/xtensis-termbox.rs"
 
 [features]
 default=[]
