@@ -10,11 +10,11 @@ readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "xtensistui"
+name = "xt_tui"
 path = "src/lib.rs"
 
 [[bin]]
-name = "xtensis-termbox"
+name = "xtt"
 path = "src/bin/xtensis-termbox.rs"
 
 [features]
