@@ -3,17 +3,7 @@ SHELL = /bin/sh
 CARGO = cargo
 CARGO_OPTS =
 
-BOOTSTRAP = script/bootstrap
-BOOTSTRAP_OPTS =
-
-CIBUILD = script/cibuild
-CIBUILD_OPTS =
-
-AFTER_CIBUILD = script/after_cibuild
-AFTER_CIBUILD_OPTS =
-
-after_cibuild:
-	${AFTER_CIBULD} ${AFTER_CIBULD_OPTS}
+.SILENT:
 
 all:
 	${MAKE} build
@@ -22,12 +12,6 @@ all:
 
 build:
 	${CARGO} ${CARGO_OPTS} build
-
-bootstrap:
-	${BOOTSTRAP} ${BOOTSTRAP_OPTS}
-
-cibuild:
-	${CIBUILD} ${CIBUILD_OPTS}
 
 clean:
 	${CARGO} ${CARGO_OPTS} clean
@@ -43,11 +27,15 @@ bench:
 	${CARGO} ${CARGO_OPTS} bench
 
 doc:
-	${CARGO}${CARGO_OPTS} doc
+	${CARGO} ${CARGO_OPTS} doc
+#	${MAKE} doc_gen_html
+#	${MAKE} doc_gen_info
 
-doc_info:
-	cd docs/; \
-	make info
+doc_gen_html:
+	cd doc/sphinx && make html
+
+doc_gen_info:
+	cd doc/sphinx && make info
 
 .PHONY: all build clean check test bench doc doc_info
 
