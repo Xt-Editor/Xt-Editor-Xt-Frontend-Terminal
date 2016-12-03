@@ -15,7 +15,7 @@
 
 extern crate rustc_serialize;
 extern crate docopt;
-extern crate xtensistui;
+extern crate xt_tui;
 extern crate rustbox;
 extern crate time;
 
@@ -29,23 +29,7 @@ use std::default::Default;
 use rustbox::{Color, RustBox};
 use rustbox::Key;
 
-use docopt::Docopt;
-
-use xtensistui::logging::logger::init_logger;
-
-const USAGE: &'static str = "
-xtensis-tui
-
-Usage:
-  xtensis-tui new [--nodaemon]
-  xtensis-tui (-h | --help)
-  xtensis-tui --version
-
-Options:
-  -h --help     Show this screen.
-  --version     Show version.
-  --nodaemon    Don't fork to background.
-";
+use xt_tui::logging::init_logger;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
@@ -75,17 +59,7 @@ fn init() {
 fn main() {
     init();
 
-    trace!("Ascertain argument struct..");
-    let args = get_arguments();
-
     info!("xtensis-tui version: {} - starting NOW..", VERSION);
-
-    if args.flag_version {
-        trace!("Arguments tell me to print my version..");
-        trace!("Complying, version printing now..");
-        print_version();
-        ::std::process::exit(0);
-    }
 
     let rustBox = match RustBox::init(Default::default()) {
         Result::Ok(v) => v,
