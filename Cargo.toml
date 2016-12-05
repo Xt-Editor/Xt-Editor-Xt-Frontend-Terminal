@@ -28,7 +28,5 @@ serde = "0.8.1"
 serde_json = "0.8.1"
 docopt = "0.6.82"
 rustc-serialize = "0.3"
+rustbox = "*"
 
-[dependencies.rustbox]
-git = "https://github.com/gchp/rustbox"
-rev = "3970d151f4e83a220dcc0b06df210accd88128f7"
