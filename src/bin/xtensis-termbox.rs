@@ -33,31 +33,14 @@ use xt_tui::logging::init_logger;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
-#[derive(Debug, RustcDecodable)]
-struct Args {
-    flag_nodaemon: bool,
-    flag_version: bool,
-    cmd_new: bool,
-}
-
 fn print_version() {
     println!("xtensis-tui version: {}", VERSION);
 }
 
-fn get_arguments() -> Args {
-    Docopt::new(USAGE)
-        .and_then(|d| d.decode())
-        .unwrap_or_else(|e| e.exit())
-}
-
-fn init() {
+fn main() {
     // Initialise logging
     init_logger();
     trace!("Logging initialised.");
-}
-
-fn main() {
-    init();
 
     info!("xtensis-tui version: {} - starting NOW..", VERSION);
 
