@@ -29,12 +29,12 @@ addons:
 
 notifications:
   email:
-    on_success: always
-    on_failure: never
+    on_success: never
+    on_failure: always
   irc:
     channels:
       - "chat.freenode.net#xtensis-editor"
-    nick: xtensis-travis-ci
+    nick: xtensis-travis
     on_success: never
     on_failure: always
     use_notice: true
