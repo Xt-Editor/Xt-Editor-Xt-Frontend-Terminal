@@ -1,7 +1,7 @@
 [package]
 name = "xtensis-termbox"
 version = "0.1.0"
-description = "Prototype of a TUI for xtensis"
+description = "A TUI frontend for Xtensis"
 license = "GPL-3.0"
 homepage = "https://github.com/shymega/xtensis-tui"
 repository = "https://github.com/shymega/xtensis-tui.git"
