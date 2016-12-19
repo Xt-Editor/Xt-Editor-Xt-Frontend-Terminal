@@ -5,10 +5,7 @@ CARGO_OPTS =
 
 .SILENT:
 
-all:
-	${MAKE} build
-	${MAKE} doc
-	${MAKE} doc_info
+all: build doc
 
 build:
 	${CARGO} ${CARGO_OPTS} build
