@@ -25,8 +25,6 @@ bench:
 
 doc:
 	${CARGO} ${CARGO_OPTS} doc
-#	${MAKE} doc_gen_html
-#	${MAKE} doc_gen_info
 
 doc_gen_html:
 	cd doc/sphinx && make html
