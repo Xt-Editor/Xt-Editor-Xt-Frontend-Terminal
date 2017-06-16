@@ -1,17 +1,17 @@
-// This file is part of Xtensis.
+// This file is part of Xt.
 
-// Xtensis is free software: you can redistribute it and/or modify
+// Xt is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 
-// Xtensis is distributed in the hope that it will be useful,
+// Xt is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
-// along with Xtensis.  If not, see <http://www.gnu.org/licenses/>
+// along with Xt.  If not, see <http://www.gnu.org/licenses/>
 
 extern crate rustc_serialize;
 extern crate docopt;
@@ -54,7 +54,7 @@ fn main() {
                   rustbox::RB_BOLD,
                   Color::White,
                   Color::Black,
-                  "Welcome to xtensis.");
+                  "Welcome to Xt.");
 
     rustBox.print(1,
                   3,

@@ -1,10 +1,10 @@
 [package]
-name = "xtensis-termbox"
+name = "xt-termbox"
 version = "0.1.0"
-description = "A TUI frontend for Xtensis"
+description = "A TUI frontend for Xt"
 license = "GPL-3.0"
-homepage = "https://github.com/shymega/xtensis-tui"
-repository = "https://github.com/shymega/xtensis-tui.git"
+homepage = "https://github.com/xt-editor/xt-frontend-tui"
+repository = "https://github.com/xt-editor/xt-frontend-tui.git"
 keywords = ["editor", "framework", "text"]
 readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
@@ -15,7 +15,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "xtt"
-path = "src/bin/xtensis-termbox.rs"
+path = "src/bin/xt-termbox.rs"
 
 [features]
 default=[]
