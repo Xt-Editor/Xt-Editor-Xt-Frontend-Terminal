@@ -23,51 +23,45 @@ extern crate time;
 extern crate log;
 extern crate fern;
 
-use std::error::Error;
-use std::default::Default;
-
 use rustbox::{Color, RustBox};
 use rustbox::Key;
+use std::default::Default;
 
 use xt_tui::logging::init_logger;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
-fn print_version() {
-    println!("xtensis-tui version: {}", VERSION);
-}
-
 fn main() {
-    // Initialise logging
+    /* Initialise logging */
     init_logger();
     trace!("Logging initialised.");
 
-    info!("xtensis-tui version: {} - starting NOW..", VERSION);
+    info!("xt-tui version: {} - starting NOW..", VERSION);
 
-    let rustBox = match RustBox::init(Default::default()) {
+    let rust_box = match RustBox::init(Default::default()) {
         Result::Ok(v) => v,
         Result::Err(e) => panic!("{}", e),
     };
 
-    rustBox.print(1,
-                  1,
-                  rustbox::RB_BOLD,
-                  Color::White,
-                  Color::Black,
-                  "Welcome to Xt.");
+    rust_box.print(1,
+                   1,
+                   rustbox::RB_BOLD,
+                   Color::White,
+                   Color::Black,
+                   "Welcome to Xt.");
 
-    rustBox.print(1,
-                  3,
-                  rustbox::RB_BOLD,
-                  Color::White,
-                  Color::Black,
-                  "Press `q` to quit.");
+    rust_box.print(1,
+                   3,
+                   rustbox::RB_BOLD,
+                   Color::White,
+                   Color::Black,
+                   "Press `q` to quit.");
 
-    rustBox.present();
+    rust_box.present();
 
     loop {
-        rustBox.present();
-        match rustBox.poll_event(false) {
+        rust_box.present();
+        match rust_box.poll_event(false) {
             Ok(rustbox::Event::KeyEvent(key)) => {
                 match key {
                     Key::Char('q') => {
