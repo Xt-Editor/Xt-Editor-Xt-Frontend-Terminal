@@ -1,5 +1,5 @@
 [package]
-name = "xt-termbox"
+name = "xt-tui"
 version = "0.1.0"
 description = "A TUI frontend for Xt"
 license = "GPL-3.0"
@@ -15,7 +15,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "xtt"
-path = "src/bin/xt-termbox.rs"
+path = "src/bin/xt-tui.rs"
 
 [features]
 default=[]

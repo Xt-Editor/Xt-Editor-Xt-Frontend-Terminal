@@ -1,2 +1,2 @@
-# xtensis-tui
+# xt-tui
 
