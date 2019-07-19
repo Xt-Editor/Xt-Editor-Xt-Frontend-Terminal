@@ -1,32 +1,40 @@
 [package]
-name = "xt-tui"
+name = "xt-term"
 version = "0.1.0"
-description = "A TUI frontend for Xt"
+description = "A terminal frontend for Xt"
 license = "GPL-3.0"
-homepage = "https://github.com/xt-editor/xt-frontend-tui"
-repository = "https://github.com/xt-editor/xt-frontend-tui.git"
+homepage = "https://github.com/xt-editor/xt-term"
+repository = "https://github.com/xt-editor/xt-term.git"
 keywords = ["editor", "framework", "text"]
 readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "xt_tui"
+name = "xt_term"
 path = "src/lib.rs"
 
 [[bin]]
 name = "xtt"
-path = "src/bin/xt-tui.rs"
-
-[features]
-default=[]
+path = "src/bin/xt-term.rs"
 
 [dependencies]
 log = "0.3.6"
-fern = "0.3.5"
 time = "0.1.35"
-serde = "0.8.1"
-serde_json = "0.8.1"
 docopt = "0.6.82"
-rustc-serialize = "0.3"
 rustbox = "0.9.0"
-clap = "2.19.2"
+
+[dependencies.clippy]
+version = "*"
+optional = true
+
+[dependencies.uuid]
+version = "0.6.3"
+features = ["v4"]
+
+[dependencies.clap]
+version = "2.31.2"
+features = ["suggestions", "color", "wrap_help"]
+
+[profile.release]
+lto = true
+

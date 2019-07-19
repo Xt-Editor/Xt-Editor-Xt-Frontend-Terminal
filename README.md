@@ -1,2 +1,2 @@
-# xt-tui
+# xt-term
 

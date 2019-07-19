@@ -12,10 +12,3 @@
 
 // You should have received a copy of the GNU General Public License
 // along with Xt.  If not, see <http://www.gnu.org/licenses/>
-
-#[macro_use]
-extern crate log;
-extern crate fern;
-
-pub mod logging;
-pub mod utils;
