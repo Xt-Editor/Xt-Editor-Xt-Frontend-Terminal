@@ -18,9 +18,9 @@ name = "xtt"
 path = "src/bin/xt-term.rs"
 
 [dependencies]
-log = "0.4.11"
-time = "0.2.22"
-docopt = "1.1.0"
+log = "0.4.14"
+time = "0.2.26"
+docopt = "1.1.1"
 rustbox = "0.11.0"
 
 [dependencies.clippy]
@@ -28,7 +28,7 @@ version = "0.0.302"
 optional = true
 
 [dependencies.uuid]
-version = "0.8.1"
+version = "0.8.2"
 features = ["v4"]
 
 [dependencies.clap]
