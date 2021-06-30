@@ -2,7 +2,7 @@
 name = "xt-term"
 version = "0.1.0"
 description = "A terminal frontend for Xt"
-license = "GPL-3.0"
+license = "MIT OR Apache-2.0"
 homepage = "https://github.com/xt-editor/xt-term"
 repository = "https://github.com/xt-editor/xt-term.git"
 keywords = ["editor", "framework", "text"]
