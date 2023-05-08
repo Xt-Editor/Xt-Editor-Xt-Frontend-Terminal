@@ -19,7 +19,7 @@ path = "src/bin/xt-term.rs"
 
 [dependencies]
 log = "0.4.17"
-time = "0.3.20"
+time = "0.3.21"
 docopt = "1.1.1"
 rustbox = "0.11.0"
 
