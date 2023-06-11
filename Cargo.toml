@@ -18,8 +18,8 @@ name = "xtt"
 path = "src/bin/xt-term.rs"
 
 [dependencies]
-log = "0.4.18"
-time = "0.3.21"
+log = "0.4.19"
+time = "0.3.22"
 docopt = "1.1.1"
 rustbox = "0.11.0"
 
@@ -32,7 +32,7 @@ version = "1.3.3"
 features = ["v4"]
 
 [dependencies.clap]
-version = "4.3.1"
+version = "4.3.3"
 features = ["suggestions", "color", "wrap_help"]
 
 [profile.release]
