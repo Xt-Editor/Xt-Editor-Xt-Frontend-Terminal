@@ -28,7 +28,7 @@ version = "0.0.302"
 optional = true
 
 [dependencies.uuid]
-version = "1.4.0"
+version = "1.4.1"
 features = ["v4"]
 
 [dependencies.clap]
