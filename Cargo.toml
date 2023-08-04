@@ -21,11 +21,7 @@ path = "src/bin/xt-term.rs"
 log = "0.4.19"
 time = "0.3.24"
 docopt = "1.1.1"
-rustbox = "0.11.0"
-
-[dependencies.clippy]
-version = "0.0.302"
-optional = true
+tui = "0.19.0"
 
 [dependencies.uuid]
 version = "1.4.1"
