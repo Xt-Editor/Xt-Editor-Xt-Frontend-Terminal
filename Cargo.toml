@@ -15,7 +15,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "xtt"
-path = "src/bin/xt-term.rs"
+path = "src/main.rs"
 
 [dependencies]
 log = "0.4.19"
