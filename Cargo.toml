@@ -1,5 +1,5 @@
 [package]
-name = "xt-frontend-term"
+name = "xt-term"
 version = "0.1.0"
 description = "A terminal frontend for Xt"
 license = "MIT OR Apache-2.0"
@@ -10,7 +10,7 @@ readme = "README.md"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "xt_frontend_term"
+name = "xt_term"
 path = "src/lib.rs"
 
 [[bin]]
