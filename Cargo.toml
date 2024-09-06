@@ -19,7 +19,7 @@ path = "src/main.rs"
 
 [dependencies]
 log = "0.4.19"
-time = "0.3.24"
+time = "0.3.36"
 docopt = "1.1.1"
 tui = "0.19.0"
 
